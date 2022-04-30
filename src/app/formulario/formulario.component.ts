@@ -1,8 +1,8 @@
 import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
-import { UserServiceService } from "../user-service.service";
-import { User } from "./UserModel";
+import { UserServiceService } from "../service/user-service.service";
+import { User } from "../models/UserModel";
 
 @Component({
   selector: 'app-formulario',

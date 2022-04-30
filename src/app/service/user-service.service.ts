@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpResponse } from '@angular/common/http';
-import {  User } from './formulario/UserModel';
+import {  User } from '../models/UserModel';
 import { map , delay } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
+import { Auth } from '../models/Auth';
 
 
 
@@ -62,6 +64,18 @@ export class UserServiceService {
       });
     }
     return users;
+  }
+
+
+  login( user : User) : Observable<any> {
+    return this.http.post(`${environment.url}/authenticate`, user)
+    .pipe(
+      map( (resp:Auth) => {
+         return resp;
+        }
+      ),
+      delay(1500)
+    )
   }
 
 }

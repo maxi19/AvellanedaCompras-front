@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ObjectUnsubscribedError, Observable, observable } from "rxjs";
 import {  ActivatedRoute } from "@angular/router";
-import { User } from "../formulario/UserModel";
+import { User } from "../models/UserModel";
 import {  map } from "rxjs/operators";
-import { UserServiceService } from "../user-service.service";
+import { UserServiceService } from "../service/user-service.service";
 import Swall from "sweetalert2";
 import { FormBuilder, FormGroup, FormControl, Validators, NgModel } from '@angular/forms';
 
