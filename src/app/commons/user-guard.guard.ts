@@ -15,7 +15,7 @@ export class UserGuardGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
   
-      if (localStorage.getItem('Authorization')) {
+      if (localStorage.getItem('token')) {
         // logged in so return true
         return true;
     }

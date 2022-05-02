@@ -1,3 +1,3 @@
 export class Auth {
-    authorization : string;
+    token : string;
 }

@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
 
       this.servicio.login(this.user).subscribe(
         (resp : Auth) =>{
-          localStorage.setItem("Authorization",resp.authorization);
+          localStorage.setItem("token",resp.token);
           this.router.navigateByUrl('home');
         
         } 
