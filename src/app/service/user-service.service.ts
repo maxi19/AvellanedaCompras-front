@@ -5,7 +5,7 @@ import { map , delay } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Auth } from '../models/Auth';
-
+import { UserDto} from "../models/user";
 
 
 @Injectable({
@@ -69,6 +69,17 @@ export class UserServiceService {
 
   login( user : User) : Observable<any> {
     return this.http.post(`${environment.url}/authenticate`, user)
+    .pipe(
+      map( (resp:Auth) => {
+         return resp;
+        }
+      ),
+      delay(1500)
+    )
+  }
+
+  registrar( user : UserDto) : Observable<any> {
+    return this.http.post(`${environment.url}/registrar`, user)
     .pipe(
       map( (resp:Auth) => {
          return resp;

@@ -13,13 +13,18 @@ import { RouterModule, Routes } from '@angular/router'
 import { ReactiveFormsModule ,FormsModule} from "@angular/forms";
 import { AuthInterceptor } from "./commons/AuthInterceptor ";
 import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
+import { ModalComponent } from './commons/modal/modal.component';
+import { NgbModule,NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
     EditComponent,
-    LoginComponent
+    LoginComponent,
+    RegistroComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,8 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [
     UserServiceService,

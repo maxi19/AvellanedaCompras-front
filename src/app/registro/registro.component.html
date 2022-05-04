@@ -1,0 +1,29 @@
+<div class="container">
+    <form class="formulario-login  mt-4 mx-auto"  [formGroup]="formulario" >
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form2Example1" class="form-control" formControlName="email"/>
+          <label class="form-label" for="form2Example1">Email address</label>
+        </div>
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form2Example2" class="form-control" formControlName="password"/>
+          <label class="form-label" for="form2Example2">Password</label>
+        </div>
+                  <!-- Password input -->
+        <div class="form-outline mb-4">
+            <input type="text" id="form2Example2" class="form-control" formControlName="firstName"/>
+            <label class="form-label" for="form2Example2">First name</label>
+        </div>
+      
+        <div class="form-outline mb-4">
+            <input type="text" id="form2Example2" class="form-control" formControlName="lastName"/>
+            <label class="form-label" for="form2Example2">Last name</label>
+        </div>
+
+        <!-- Submit button -->
+        <button type="button" class="btn btn-primary btn-block mb-4"  (click)="registrar()" >Register</button>
+    
+      </form>
+</div>

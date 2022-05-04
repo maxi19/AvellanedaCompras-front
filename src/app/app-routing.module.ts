@@ -4,10 +4,12 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { EditComponent } from './edit/edit.component';
 import { LoginComponent } from './login/login.component';
 import { UserGuardGuard } from './commons/user-guard.guard';
+import { RegistroComponent } from './registro/registro.component';
 
 const routes: Routes = [
   { path: 'home', component: FormularioComponent,canActivate:[UserGuardGuard]  } ,
   { path: 'login', component: LoginComponent },
+  { path: 'registro', component: RegistroComponent},
   { path: 'user/:id', component: EditComponent, canActivate:[UserGuardGuard] },
   { path:'',redirectTo:'login', pathMatch: 'full' },
 
