@@ -1,5 +1,15 @@
-<div class="container">
-    <form class="formulario-login  mt-4 mx-auto"  [formGroup]="formulario" >
+<div class="container mt-4">
+  <div class="w-70 mr-10">
+    <div class="row ">
+      <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+      </svg>
+    </div>
+    
+    <div class="row  mt-4 " >
+      <div class="col-sm">
+      <form class="formulario-login "  [formGroup]="formulario" >
         <!-- Email input -->
         <div class="form-outline mb-4">
           <input type="email" id="form2Example1" class="form-control" formControlName="email"/>
@@ -21,9 +31,24 @@
             <input type="text" id="form2Example2" class="form-control" formControlName="lastName"/>
             <label class="form-label" for="form2Example2">Last name</label>
         </div>
-
+    
         <!-- Submit button -->
         <button type="button" class="btn btn-primary btn-block mb-4"  (click)="registrar()" >Register</button>
     
       </form>
+    </div>
+    </div>
+    <div class="alert alert-danger" role="alert">
+      This is a danger alert—check it out!
+    </div>
+
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Bien echo!</h4>
+      <p>Se a creado el nuevo usuario</p>
+      <hr>
+      <p class="mb-0">Ya podes acceder al sistema</p>
+    </div>
+
+  </div>
+
 </div>
