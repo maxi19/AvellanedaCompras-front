@@ -12,23 +12,23 @@
       <form class="formulario-login "  [formGroup]="formulario" >
         <!-- Email input -->
         <div class="form-outline mb-4">
-          <input type="email" id="form2Example1" class="form-control" formControlName="email"/>
+          <input type="email" id="form2Example1" class="form-control" formControlName="email" [class.is-invalid]="emailNoValido"/>
           <label class="form-label" for="form2Example1">Email address</label>
         </div>
       
         <!-- Password input -->
         <div class="form-outline mb-4">
-          <input type="password" id="form2Example2" class="form-control" formControlName="password"/>
+          <input type="password" id="form2Example2" class="form-control" formControlName="password" [class.is-invalid]="passwordNoValido"/>
           <label class="form-label" for="form2Example2">Password</label>
         </div>
                   <!-- Password input -->
         <div class="form-outline mb-4">
-            <input type="text" id="form2Example2" class="form-control" formControlName="firstName"/>
+            <input type="text" id="form2Example2" class="form-control" formControlName="firstName" [class.is-invalid]="firstNameNoValido"/>
             <label class="form-label" for="form2Example2">First name</label>
         </div>
       
         <div class="form-outline mb-4">
-            <input type="text" id="form2Example2" class="form-control" formControlName="lastName"/>
+            <input type="text" id="form2Example2" class="form-control" formControlName="lastName" [class.is-invalid]="lastNameNoValido"/>
             <label class="form-label" for="form2Example2">Last name</label>
         </div>
     

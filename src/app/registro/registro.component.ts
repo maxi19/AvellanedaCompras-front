@@ -38,6 +38,7 @@ export class RegistroComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(10)]],
       firstName:['', [Validators.required, Validators.minLength(3), Validators.maxLength(10)]],
       lastName:['', [Validators.required, Validators.minLength(3), Validators.maxLength(10)]],
+     valid : true
     });
   }
 
@@ -58,6 +59,20 @@ export class RegistroComponent implements OnInit {
       
   }
 
+  emailNoValido(){
+    return this.formulario.get("email").invalid && this.formulario.get("email").touched
+  }
 
+  firstNameNoValido(){
+    return this.formulario.get("firstName").invalid && this.formulario.get("firstName").touched
+  }
+
+  lastNameNoValido(){
+    return this.formulario.get("lastName").invalid && this.formulario.get("lastName").touched
+  }
+
+  passwordNoValido(){
+    return this.formulario.get("password").invalid && this.formulario.get("password").touched
+  }
 
 }

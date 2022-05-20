@@ -62,16 +62,9 @@
     </form>
   </div>
 
-  <div class="row">
+  <div class="row mt-1" *ngIf="mostrarVentanaWarning">
     <div class="alert alert-danger" role="alert">
-      This is a danger alert—check it out!
-    </div>
-
-    <div class="alert alert-success" role="alert">
-      <h4 class="alert-heading">Bien echo!</h4>
-      <p>Se a creado el nuevo usuario</p>
-      <hr>
-      <p class="mb-0">Ya podes acceder al sistema</p>
+     {{mensajeError}}
     </div>
   </div>
    
